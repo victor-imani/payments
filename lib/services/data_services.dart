@@ -1,6 +1,7 @@
 // import 'dart:convert';
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:payments/models/data_model.dart';
 // import 'package:flutter/services.dart' show rootBundle;
@@ -20,12 +21,18 @@ class DataServices {
         return list.map((e) => DataModel.fromJson(e)).toList();
         
       } else {
-        print("Something went wrong");
+        if (kDebugMode) {
+          print("Something went wrong");
+        }
         return <DataModel>[];
       }
     } catch (e) {
-      print(e);
-      print("API request failed");
+      if (kDebugMode) {
+        print(e);
+      }
+      if (kDebugMode) {
+        print("API request failed");
+      }
       return <DataModel>[];
     }
 

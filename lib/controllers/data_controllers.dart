@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:payments/models/data_model.dart';
 import 'package:payments/services/data_services.dart';
@@ -24,8 +25,12 @@ class DataController extends GetxController {
       var info = service.getUsers();
       list.addAll(await info);
     } catch (e) {
-      print("Encountered error!!");
-      print(e);
+      if (kDebugMode) {
+        print("Encountered error!!");
+      }
+      if (kDebugMode) {
+        print(e);
+      }
     } finally {
       _loading.value = true;
     }

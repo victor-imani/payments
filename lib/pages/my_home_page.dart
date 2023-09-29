@@ -246,7 +246,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fit: BoxFit.cover,
                                   image: NetworkImage(
                                       // _controller.list[index]["img"]),
-                                      "http://10.0.2.2:8000/uploads/${_controller.list[index].brand_logo}"),
+                                      "http://10.0.2.2:8000/uploads/${_controller.list[index].brandLogo}"),
                                 ),
                               ),
                             ),
@@ -255,14 +255,14 @@ class _MyHomePageState extends State<MyHomePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  _controller.list[index].brand_name,
+                                  _controller.list[index].brandName,
                                   style: const TextStyle(
                                       fontSize: 16,
                                       color: AppColor.mainColor,
                                       fontWeight: FontWeight.w700),
                                 ),
                                 const SizedBox(height: 10),
-                                Text("ID: ${_controller.list[index].brand_id}",
+                                Text("ID: ${_controller.list[index].brandId}",
                                     style: TextStyle(
                                         fontSize: 16,
                                         color: AppColor.idColor,
@@ -272,7 +272,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ],
                         ),
                         SizedText(
-                            text: _controller.list[index].due_info,
+                            text: _controller.list[index].dueInfo,
                             color: AppColor.green),
                         const SizedBox(height: 5),
                       ],

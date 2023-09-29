@@ -1,23 +1,23 @@
 class DataModel {
-  String brand_name;
-  String brand_logo;
+  String brandName;
+  String brandLogo;
   int status;
-  String due_info;
+  String dueInfo;
   String due;
-  int brand_id;
+  int brandId;
 
   DataModel(
-      {required this.brand_logo,
-      required this.brand_name,
+      {required this.brandLogo,
+      required this.brandName,
       required this.status,
-      required this.due_info,
-      required this.due, required this.brand_id});
+      required this.dueInfo,
+      required this.due, required this.brandId});
 
   factory DataModel.fromJson(Map<String, dynamic> json) => DataModel(
-      brand_name: json["brand_name"],
-      brand_logo: json["brand_logo"] ?? "images/brand1.png",
+      brandName: json["brand_name"],
+      brandLogo: json["brand_logo"] ?? "images/brand1.png",
       status: json["status"],
       due: json["due"].toString(),
-      due_info: json["due_info"],
-      brand_id: json["brand_id"]);
+      dueInfo: json["due_info"],
+      brandId: json["brand_id"]);
 }
